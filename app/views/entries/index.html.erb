@@ -1,35 +1,45 @@
 <h1>Listing entries</h1>
 
 <table>
-  <tr>
-    <th>Flown</th>
-    <th>Plane</th>
-    <th>From</th>
-    <th>To</th>
-    <th>Remarks</th>
-    <th>Takeoffs</th>
-    <th>Landings</th>
-    <th>Sel</th>
-    <th>Mel</th>
-    <th>Night</th>
-    <th>Actual instrument</th>
-    <th>Simulated instrument</th>
-    <th>Instrument approaches</th>
-    <th>Flight simulator</th>
-    <th>Cross country</th>
-    <th>Solo</th>
-    <th>Dual received</th>
-    <th>Pic</th>
-    <th>Total flight</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <thead>
+    <tr>
+      <th rowspan='2'>Date</th>
+      <th rowspan='2'>Aircraft Ident</th>
+      <th rowspan='2'>Aircraft Model</th>
+      <th colspan='2'>Route of Flight</th>
+      <th rowspan='2'>Remarks</th>
+      <th rowspan='2'>Takeoffs</th>
+      <th rowspan='2'>Landings</th>
+      <th colspan='2'>Aircraft Category and Class</th>
+      <th colspan='3'>Conditions of Flight</th>
+      <th rowspan='2'>Flight simulator</th>
+      <th rowspan='2'>Instrument approaches</th>
+      <th colspan='4'>Type of Piloting Time</th>
+      <th rowspan='2'>Total flight</th>
+      <th rowspan='2'></th>
+      <th rowspan='2'></th>
+      <th rowspan='2'></th>
+    </tr>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Single-engine land</th>
+      <th>Multi-engine-land</th>
+      <th>Night</th>
+      <th>Actual instrument</th>
+      <th>Simulated instrument</th>
+      <th>Cross country</th>
+      <th>Solo</th>
+      <th>Dual received</th>
+      <th>Pic</th>
+    </tr>
+  </thead>
 
 <% @entries.each do |entry| %>
   <tr>
     <td><%= entry.flown %></td>
-    <td><%= entry.plane %></td>
+    <td><%= entry.plane.tail_number %></td>
+    <td><%= entry.plane.model %></td>
     <td><%= entry.from %></td>
     <td><%= entry.to %></td>
     <td><%= entry.remarks %></td>
