@@ -8,4 +8,10 @@ class PlaneTest < ActiveSupport::TestCase
 		end
 	end
 
+	test "model should be required" do
+		assert_raises ActiveRecord::RecordInvalid do
+			Plane.create! :tail_number => 'N12345'
+		end
+	end
+
 end
