@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tail number:</b>
+  <%= @plane.tail_number %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @plane.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_plane_path(@plane) %> |
+<%= link_to 'Back', planes_path %>
