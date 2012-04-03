@@ -2,7 +2,7 @@
 
 one:
   flown: 2012-04-03
-  plane: 
+  plane: one
   from: MyString
   to: MyString
   remarks: MyText
@@ -23,7 +23,7 @@ one:
 
 two:
   flown: 2012-04-03
-  plane: 
+  plane: two
   from: MyString
   to: MyString
   remarks: MyText
