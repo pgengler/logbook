@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403185420) do
+ActiveRecord::Schema.define(:version => 20120403193140) do
+
+  create_table "entries", :force => true do |t|
+    t.date     "flown"
+    t.integer  "plane_id"
+    t.string   "from"
+    t.string   "to"
+    t.text     "remarks"
+    t.integer  "takeoffs"
+    t.integer  "landings"
+    t.decimal  "sel"
+    t.decimal  "mel"
+    t.decimal  "night"
+    t.decimal  "actual_instrument"
+    t.decimal  "simulated_instrument"
+    t.integer  "instrument_approaches"
+    t.decimal  "flight_simulator"
+    t.decimal  "cross_country"
+    t.decimal  "solo"
+    t.decimal  "dual_received"
+    t.decimal  "pic"
+    t.decimal  "total_flight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "entries", ["plane_id"], :name => "index_entries_on_plane_id"
 
   create_table "planes", :force => true do |t|
     t.string   "tail_number"

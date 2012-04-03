@@ -1,4 +1,6 @@
 Logbook::Application.routes.draw do
+  resources :entries
+
   resources :planes
 
   # The priority is based upon order of creation:

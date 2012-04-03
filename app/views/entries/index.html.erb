@@ -1,0 +1,59 @@
+<h1>Listing entries</h1>
+
+<table>
+  <tr>
+    <th>Flown</th>
+    <th>Plane</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Remarks</th>
+    <th>Takeoffs</th>
+    <th>Landings</th>
+    <th>Sel</th>
+    <th>Mel</th>
+    <th>Night</th>
+    <th>Actual instrument</th>
+    <th>Simulated instrument</th>
+    <th>Instrument approaches</th>
+    <th>Flight simulator</th>
+    <th>Cross country</th>
+    <th>Solo</th>
+    <th>Dual received</th>
+    <th>Pic</th>
+    <th>Total flight</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entries.each do |entry| %>
+  <tr>
+    <td><%= entry.flown %></td>
+    <td><%= entry.plane %></td>
+    <td><%= entry.from %></td>
+    <td><%= entry.to %></td>
+    <td><%= entry.remarks %></td>
+    <td><%= entry.takeoffs %></td>
+    <td><%= entry.landings %></td>
+    <td><%= entry.sel %></td>
+    <td><%= entry.mel %></td>
+    <td><%= entry.night %></td>
+    <td><%= entry.actual_instrument %></td>
+    <td><%= entry.simulated_instrument %></td>
+    <td><%= entry.instrument_approaches %></td>
+    <td><%= entry.flight_simulator %></td>
+    <td><%= entry.cross_country %></td>
+    <td><%= entry.solo %></td>
+    <td><%= entry.dual_received %></td>
+    <td><%= entry.pic %></td>
+    <td><%= entry.total_flight %></td>
+    <td><%= link_to 'Show', entry %></td>
+    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+    <td><%= link_to 'Destroy', entry, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entry', new_entry_path %>

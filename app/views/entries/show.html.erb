@@ -1,0 +1,100 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Flown:</b>
+  <%= @entry.flown %>
+</p>
+
+<p>
+  <b>Plane:</b>
+  <%= @entry.plane %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @entry.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @entry.to %>
+</p>
+
+<p>
+  <b>Remarks:</b>
+  <%= @entry.remarks %>
+</p>
+
+<p>
+  <b>Takeoffs:</b>
+  <%= @entry.takeoffs %>
+</p>
+
+<p>
+  <b>Landings:</b>
+  <%= @entry.landings %>
+</p>
+
+<p>
+  <b>Sel:</b>
+  <%= @entry.sel %>
+</p>
+
+<p>
+  <b>Mel:</b>
+  <%= @entry.mel %>
+</p>
+
+<p>
+  <b>Night:</b>
+  <%= @entry.night %>
+</p>
+
+<p>
+  <b>Actual instrument:</b>
+  <%= @entry.actual_instrument %>
+</p>
+
+<p>
+  <b>Simulated instrument:</b>
+  <%= @entry.simulated_instrument %>
+</p>
+
+<p>
+  <b>Instrument approaches:</b>
+  <%= @entry.instrument_approaches %>
+</p>
+
+<p>
+  <b>Flight simulator:</b>
+  <%= @entry.flight_simulator %>
+</p>
+
+<p>
+  <b>Cross country:</b>
+  <%= @entry.cross_country %>
+</p>
+
+<p>
+  <b>Solo:</b>
+  <%= @entry.solo %>
+</p>
+
+<p>
+  <b>Dual received:</b>
+  <%= @entry.dual_received %>
+</p>
+
+<p>
+  <b>Pic:</b>
+  <%= @entry.pic %>
+</p>
+
+<p>
+  <b>Total flight:</b>
+  <%= @entry.total_flight %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

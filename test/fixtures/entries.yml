@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  flown: 2012-04-03
+  plane: 
+  from: MyString
+  to: MyString
+  remarks: MyText
+  takeoffs: 1
+  landings: 1
+  sel: 9.99
+  mel: 9.99
+  night: 9.99
+  actual_instrument: 9.99
+  simulated_instrument: 9.99
+  instrument_approaches: 1
+  flight_simulator: 9.99
+  cross_country: 9.99
+  solo: 9.99
+  dual_received: 9.99
+  pic: 9.99
+  total_flight: 9.99
+
+two:
+  flown: 2012-04-03
+  plane: 
+  from: MyString
+  to: MyString
+  remarks: MyText
+  takeoffs: 1
+  landings: 1
+  sel: 9.99
+  mel: 9.99
+  night: 9.99
+  actual_instrument: 9.99
+  simulated_instrument: 9.99
+  instrument_approaches: 1
+  flight_simulator: 9.99
+  cross_country: 9.99
+  solo: 9.99
+  dual_received: 9.99
+  pic: 9.99
+  total_flight: 9.99

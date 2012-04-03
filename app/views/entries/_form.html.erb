@@ -1,0 +1,93 @@
+<%= form_for(@entry) do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+      <% @entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :flown %><br />
+    <%= f.date_select :flown %>
+  </div>
+  <div class="field">
+    <%= f.label :plane %><br />
+    <%= f.text_field :plane %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br />
+    <%= f.text_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br />
+    <%= f.text_area :remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :takeoffs %><br />
+    <%= f.number_field :takeoffs %>
+  </div>
+  <div class="field">
+    <%= f.label :landings %><br />
+    <%= f.number_field :landings %>
+  </div>
+  <div class="field">
+    <%= f.label :sel %><br />
+    <%= f.text_field :sel %>
+  </div>
+  <div class="field">
+    <%= f.label :mel %><br />
+    <%= f.text_field :mel %>
+  </div>
+  <div class="field">
+    <%= f.label :night %><br />
+    <%= f.text_field :night %>
+  </div>
+  <div class="field">
+    <%= f.label :actual_instrument %><br />
+    <%= f.text_field :actual_instrument %>
+  </div>
+  <div class="field">
+    <%= f.label :simulated_instrument %><br />
+    <%= f.text_field :simulated_instrument %>
+  </div>
+  <div class="field">
+    <%= f.label :instrument_approaches %><br />
+    <%= f.number_field :instrument_approaches %>
+  </div>
+  <div class="field">
+    <%= f.label :flight_simulator %><br />
+    <%= f.text_field :flight_simulator %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_country %><br />
+    <%= f.text_field :cross_country %>
+  </div>
+  <div class="field">
+    <%= f.label :solo %><br />
+    <%= f.text_field :solo %>
+  </div>
+  <div class="field">
+    <%= f.label :dual_received %><br />
+    <%= f.text_field :dual_received %>
+  </div>
+  <div class="field">
+    <%= f.label :pic %><br />
+    <%= f.text_field :pic %>
+  </div>
+  <div class="field">
+    <%= f.label :total_flight %><br />
+    <%= f.text_field :total_flight %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
