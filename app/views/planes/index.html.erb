@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Tail number</th>
-    <th>Type</th>
+    <th>Model</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +12,7 @@
 <% @planes.each do |plane| %>
   <tr>
     <td><%= plane.tail_number %></td>
-    <td><%= plane.type %></td>
+    <td><%= plane.model %></td>
     <td><%= link_to 'Show', plane %></td>
     <td><%= link_to 'Edit', edit_plane_path(plane) %></td>
     <td><%= link_to 'Destroy', plane, confirm: 'Are you sure?', method: :delete %></td>

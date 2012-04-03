@@ -2,8 +2,8 @@
 
 one:
   tail_number: MyString
-  type: 
+  model: 
 
 two:
   tail_number: MyString
-  type: 
+  model: 
