@@ -1,3 +1,3 @@
 class Entry < ActiveRecord::Base
-	has_one :plane
+	belongs_to :plane
 end
