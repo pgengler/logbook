@@ -3,6 +3,8 @@ Logbook::Application.routes.draw do
 
   resources :planes
 
+	root :to => 'entries#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
