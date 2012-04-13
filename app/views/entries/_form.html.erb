@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :plane %><br />
-    <%= f.text_field :plane %>
+		<%= f.select :plane, Plane.all.map { |plane| [ "#{plane.tail_number} (#{plane.model})", plane.id ] } %>
   </div>
   <div class="field">
     <%= f.label :from %><br />
