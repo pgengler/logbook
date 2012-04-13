@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403193140) do
+ActiveRecord::Schema.define(:version => 20120413201155) do
 
   create_table "entries", :force => true do |t|
     t.date     "flown"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20120403193140) do
     t.decimal  "actual_instrument"
     t.decimal  "simulated_instrument"
     t.integer  "instrument_approaches"
-    t.decimal  "flight_simulator"
     t.decimal  "cross_country"
     t.decimal  "solo"
     t.decimal  "dual_received"

@@ -14,7 +14,6 @@ one:
   actual_instrument: 9.99
   simulated_instrument: 9.99
   instrument_approaches: 1
-  flight_simulator: 9.99
   cross_country: 9.99
   solo: 9.99
   dual_received: 9.99
@@ -35,7 +34,6 @@ two:
   actual_instrument: 9.99
   simulated_instrument: 9.99
   instrument_approaches: 1
-  flight_simulator: 9.99
   cross_country: 9.99
   solo: 9.99
   dual_received: 9.99
