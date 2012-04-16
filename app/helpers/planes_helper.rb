@@ -4,7 +4,7 @@ module PlanesHelper
 		options = Plane.all.map { |plane| [ "#{plane.tail_number} (#{plane.model})", plane.id ] }
 		options.unshift [ '--', nil ]
 
-		form.select :plane_id, options #[ [ '', nil ], Plane.all.map { |plane| [ "#{plane.tail_number} (#{plane.model})", plane.id ] } ]
+		form.select :plane_id, options #[ [ '', nil ], Plane.all.map { |plane| [ plane_for_display(plane), plane.id ] } ]
 	end
 
 	# Format Plane object as a string for display
