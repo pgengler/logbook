@@ -3,9 +3,9 @@
 one:
   flown: 2012-04-03
   plane: one
-  from: MyString
-  to: MyString
-  remarks: MyText
+  from: KABC
+  to: KXYZ
+  remarks: Test flight
   takeoffs: 1
   landings: 1
   sel: 9.99
@@ -23,9 +23,9 @@ one:
 two:
   flown: 2012-04-03
   plane: two
-  from: MyString
-  to: MyString
-  remarks: MyText
+  from: KXYZ
+  to: KABC
+  remarks: Return flight
   takeoffs: 1
   landings: 1
   sel: 9.99
