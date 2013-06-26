@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(:version => 20120413201155) do
     t.decimal  "dual_received"
     t.decimal  "pic"
     t.decimal  "total_flight"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   add_index "entries", ["plane_id"], :name => "index_entries_on_plane_id"
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(:version => 20120413201155) do
   create_table "planes", :force => true do |t|
     t.string   "tail_number"
     t.string   "model"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
