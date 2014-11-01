@@ -1,6 +1,11 @@
 class EntriesController < ApplicationController
 	def index
 		@entries = Entry.all
+		@sums = { }
+		cols = Entry.column_names - [ 'flown', 'plane_id', 'from', 'to', 'remarks', 'created_at', 'updated_at' ]
+		cols.each do |name|
+			@sums[ name ] = Entry.sum(name)
+		end
 	end
 
 	def show
