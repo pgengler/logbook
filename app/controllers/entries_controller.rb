@@ -1,83 +1,44 @@
 class EntriesController < ApplicationController
-  # GET /entries
-  # GET /entries.json
-  def index
-    @entries = Entry.all
+	def index
+		@entries = Entry.all
+	end
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @entries }
-    end
-  end
+	def show
+		@entry = Entry.find(params[:id])
+	end
 
-  # GET /entries/1
-  # GET /entries/1.json
-  def show
-    @entry = Entry.find(params[:id])
+	def new
+		@entry = Entry.new
+	end
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @entry }
-    end
-  end
+	def edit
+		@entry = Entry.find(params[:id])
+	end
 
-  # GET /entries/new
-  # GET /entries/new.json
-  def new
-    @entry = Entry.new
+	def create
+		@entry = Entry.new(params[:entry])
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @entry }
-    end
-  end
+		if @entry.save
+			redirect_to @entry, notice: 'Entry was successfully created.'
+		else
+			render action: "new"
+		end
+	end
 
-  # GET /entries/1/edit
-  def edit
-    @entry = Entry.find(params[:id])
-  end
+	def update
+		@entry = Entry.find(params[:id])
 
-  # POST /entries
-  # POST /entries.json
-  def create
-    @entry = Entry.new(params[:entry])
+		if @entry.update_attributes(params[:entry])
+			redirect_to @entry, notice: 'Entry was successfully updated.'
+		else
+			render action: "edit"
+		end
+	end
 
-    respond_to do |format|
-      if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-        format.json { render json: @entry, status: :created, location: @entry }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+	def destroy
+		@entry = Entry.find(params[:id])
+		@entry.destroy
 
-  # PUT /entries/1
-  # PUT /entries/1.json
-  def update
-    @entry = Entry.find(params[:id])
-
-    respond_to do |format|
-      if @entry.update_attributes(params[:entry])
-        format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /entries/1
-  # DELETE /entries/1.json
-  def destroy
-    @entry = Entry.find(params[:id])
-    @entry.destroy
-
-    respond_to do |format|
-      format.html { redirect_to entries_url }
-      format.json { head :ok }
-    end
-  end
+		redirect_to entries_url
+	end
 end
