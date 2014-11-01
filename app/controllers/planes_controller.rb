@@ -17,7 +17,7 @@ class PlanesController < ApplicationController
 	end
 
 	def create
-		@plane = Plane.new(params[:plane])
+		@plane = Plane.new(plane_params)
 		if @plane.save
 			redirect_to @plane, notice: 'Plane was successfully created.'
 		else
@@ -28,7 +28,7 @@ class PlanesController < ApplicationController
 	def update
 		@plane = Plane.find(params[:id])
 
-		if @plane.update_attributes(params[:plane])
+		if @plane.update_attributes(plane_params)
 			redirect_to @plane, notice: 'Plane was successfully updated.'
 		else
 			render action: "edit"
@@ -39,5 +39,11 @@ class PlanesController < ApplicationController
 		@plane = Plane.find(params[:id])
 		@plane.destroy
 		redirect_to planes_url
+	end
+
+	private
+
+	def plane_params
+		params.require(:plane).permit(:tail_number, :model)
 	end
 end
