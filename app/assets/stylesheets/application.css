@@ -5,3 +5,27 @@
  *= require_self
  *= require_tree . 
 */
+input {
+	width: 95%;
+}
+
+	input.button {
+		width: auto;
+	}
+
+table {
+	background-color: black;
+}
+
+td {
+	background-color: white;
+	text-align: center;
+}
+
+th {
+	background-color: #ddd;
+}
+
+tr#totals td {
+	font-weight: bold;
+}
