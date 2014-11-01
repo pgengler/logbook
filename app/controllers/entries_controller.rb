@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
 	end
 
 	def create
-		@entry = Entry.new(params[:entry])
+		@entry = Entry.new(entry_params)
 
 		if @entry.save
 			redirect_to @entry, notice: 'Entry was successfully created.'
@@ -28,7 +28,7 @@ class EntriesController < ApplicationController
 	def update
 		@entry = Entry.find(params[:id])
 
-		if @entry.update_attributes(params[:entry])
+		if @entry.update_attributes(entry_params)
 			redirect_to @entry, notice: 'Entry was successfully updated.'
 		else
 			render action: "edit"
@@ -40,5 +40,10 @@ class EntriesController < ApplicationController
 		@entry.destroy
 
 		redirect_to entries_url
+	end
+
+	private
+	def entry_params
+		params.require(:entry).permit(:flown, :plane_id, :from, :to, :remarks, :takeoffs, :landings, :sel, :mel, :night, :actual_instrument, :simulated_instrument, :instrument_approaches, :cross_country, :solo, :dual_received, :pic, :total_flight)
 	end
 end
