@@ -5,8 +5,16 @@
  *= require_self
  *= require_tree . 
 */
-input {
+input[type=text], textarea {
+	border: 1px solid #ccc;
+	height: 2em;
+	margin: 0;
+	padding: 0;
 	width: 95%;
+}
+
+textarea {
+	width: 10em;
 }
 
 	input.button {
@@ -14,11 +22,11 @@ input {
 	}
 
 table {
-	background-color: black;
+	border-collapse: collapse;
 }
 
-td {
-	background-color: white;
+th, td {
+	border: 1px solid #444;
 	text-align: center;
 }
 

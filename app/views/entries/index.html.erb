@@ -1,4 +1,5 @@
-<table cellspacing='1' cellpadding='2'>
+<%= form_for(Entry.new) do |f| %>
+<table>
 	<thead>
 		<tr>
 			<th rowspan='2'>Date</th>
@@ -13,7 +14,6 @@
 			<th rowspan='2'>Instrument approaches</th>
 			<th colspan='4'>Type of Piloting Time</th>
 			<th rowspan='2'>Total flight</th>
-			<th rowspan='2'></th>
 			<th rowspan='2'></th>
 		</tr>
 		<tr>
@@ -52,8 +52,10 @@
 		<td><%= entry.dual_received %></td>
 		<td><%= entry.pic %></td>
 		<td><%= entry.total_flight %></td>
-		<td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-		<td><%= link_to 'Destroy', entry, confirm: 'Are you sure?', method: :delete %></td>
+		<td>
+			<%= link_to 'Edit', edit_entry_path(entry) %>
+			<%= link_to 'Destroy', entry, confirm: 'Are you sure?', method: :delete %>
+		</td>
 	</tr>
 <% end %>
 	<tr id='totals'>
@@ -77,11 +79,31 @@
 		<td><%= @sums['pic'] %></td>
 		<td><%= @sums['total_flight'] %></td>
 		<td>&nbsp;</td>
-		<td>&nbsp;</td>
 	</tr>
 
+	<tr>
+		<td><%= f.text_field :flown %></td>
+		<td colspan='2'><%= plane_dropdown(f) %></td>
+		<td><%= f.text_field :from %></td>
+		<td><%= f.text_field :to %></td>
+		<td><%= f.text_area :remarks %></td>
+		<td><%= f.text_field :takeoffs %></td>
+		<td><%= f.text_field :landings %></td>
+		<td><%= f.text_field :sel %></td>
+		<td><%= f.text_field :mel %></td>
+		<td><%= f.text_field :night %></td>
+		<td><%= f.text_field :actual_instrument %></td>
+		<td><%= f.text_field :simulated_instrument %></td>
+		<td><%= f.text_field :instrument_approaches %></td>
+		<td><%= f.text_field :cross_country %></td>
+		<td><%= f.text_field :solo %></td>
+		<td><%= f.text_field :dual_received %></td>
+		<td><%= f.text_field :pic %></td>
+		<td><%= f.text_field :total_flight %></td>
+		<td><%= f.submit 'Add' %></td>
+	</tr>
 </table>
-
+<% end %>
 <br>
 
 <%= link_to 'New Entry', new_entry_path %>
