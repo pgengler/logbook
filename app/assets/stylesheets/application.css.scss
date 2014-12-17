@@ -3,8 +3,13 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
 */
+
+@import "bourbon";
+@import "base/base";
+@import "neat";
+@import "table-borders";
+
 input[type=text], textarea {
 	border: 1px solid #ccc;
 	height: 2em;
@@ -17,10 +22,20 @@ textarea {
 	width: 10em;
 }
 
-	input.button {
-		width: auto;
-	}
+input.button {
+    width: auto;
+}
 
+table {
+  width: auto;
+}
+
+td, th {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/*
 table {
 	border-collapse: collapse;
 }
@@ -33,7 +48,7 @@ th, td {
 th {
 	background-color: #ddd;
 }
-
+*/
 tr#totals td {
 	font-weight: bold;
 }
