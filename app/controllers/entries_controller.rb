@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
 		@sums = { }
 		cols = Entry.column_names - [ 'flown', 'plane_id', 'from', 'to', 'remarks', 'created_at', 'updated_at' ]
 		cols.each do |name|
-			@sums[ name ] = Entry.sum(name)
+			@sums[name] = Entry.sum(name)
 		end
 	end
 
@@ -36,7 +36,7 @@ class EntriesController < ApplicationController
 		@entry = Entry.find(params[:id])
 		@entry.destroy
 
-		redirect_to entries_url
+		redirect_to entries_url, notice: 'Entry was deleted.'
 	end
 
 	private
