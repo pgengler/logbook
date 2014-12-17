@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Logbook</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Logbook</title>
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header-container">
+	<header class="navigation">
+		<div class="navigation-wrapper">
+			<%= link_to root_path, class: "logo" do %>
+				LOGO
+			<% end %>
+			<%= link_to "MENU", entries_path, class: "navigation-menu-button js-mobile-menu" %>
+			<div class="nav">
+				<ul class="js-navigation-menu navigation-menu show">
+					<li class="nav-link"><%= link_to "Home", entries_path %></li>
+					<li class="nav-link"><%= link_to "Planes", planes_path %></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+</div>
 
 <%= yield %>
 
