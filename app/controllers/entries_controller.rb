@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
 		@entry = Entry.new(entry_params)
 
 		if @entry.save
-			redirect_to entries_url, notice: 'Entry was successfully created.'
+			redirect_to entries_url, flash: { success: 'Entry was successfully created.' }
 		else
 			render action: "new"
 		end
@@ -26,7 +26,7 @@ class EntriesController < ApplicationController
 		@entry = Entry.find(params[:id])
 
 		if @entry.update_attributes(entry_params)
-			redirect_to entries_url, notice: 'Entry was successfully updated.'
+			redirect_to entries_url, flash: { success: 'Entry was successfully updated.' }
 		else
 			render action: "edit"
 		end
@@ -36,7 +36,7 @@ class EntriesController < ApplicationController
 		@entry = Entry.find(params[:id])
 		@entry.destroy
 
-		redirect_to entries_url, notice: 'Entry was deleted.'
+		redirect_to entries_url, flash: { success: 'Entry was deleted.' }
 	end
 
 	private

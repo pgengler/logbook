@@ -24,7 +24,7 @@ class EntriesControllerTest < ActionController::TestCase
 
   test "sets a flash message after creating a new entry" do
     post :create, entry: @entry.attributes
-    assert_equal "Entry was successfully created.", flash[:notice]
+    assert_equal "Entry was successfully created.", flash[:success]
   end
 
 
@@ -46,7 +46,7 @@ class EntriesControllerTest < ActionController::TestCase
 
   test "sets a flash message when updating an entry" do
     put :update, id: @entry, entry: @entry.attributes
-    assert_equal "Entry was successfully updated.", flash[:notice]
+    assert_equal "Entry was successfully updated.", flash[:success]
   end
 
   test "should destroy entry" do
@@ -62,6 +62,6 @@ class EntriesControllerTest < ActionController::TestCase
 
   test "sets a flash message when deleting an entry" do
     delete :destroy, id: @entry
-    assert_equal "Entry was deleted.", flash[:notice]
+    assert_equal "Entry was deleted.", flash[:success]
   end
 end
