@@ -9,9 +9,9 @@
 @import "base/base";
 @import "neat";
 
-@import "flash";
-@import "navigation";
-@import "table-borders";
+@import "refills/flash";
+@import "refills/navigation";
+@import "refills/table-borders";
 
 div.header-container {
   max-width: 68em;
