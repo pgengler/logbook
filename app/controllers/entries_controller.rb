@@ -8,14 +8,6 @@ class EntriesController < ApplicationController
 		end
 	end
 
-	def show
-		@entry = Entry.find(params[:id])
-	end
-
-	def new
-		@entry = Entry.new
-	end
-
 	def edit
 		@entry = Entry.find(params[:id])
 	end
@@ -24,7 +16,7 @@ class EntriesController < ApplicationController
 		@entry = Entry.new(entry_params)
 
 		if @entry.save
-			redirect_to @entry, notice: 'Entry was successfully created.'
+			redirect_to entries_url, notice: 'Entry was successfully created.'
 		else
 			render action: "new"
 		end
@@ -34,7 +26,7 @@ class EntriesController < ApplicationController
 		@entry = Entry.find(params[:id])
 
 		if @entry.update_attributes(entry_params)
-			redirect_to @entry, notice: 'Entry was successfully updated.'
+			redirect_to entries_url, notice: 'Entry was successfully updated.'
 		else
 			render action: "edit"
 		end
