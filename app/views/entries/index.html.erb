@@ -59,7 +59,7 @@
 		<td><%= entry.total_flight %></td>
 		<td>
 			<%= link_to 'Edit', edit_entry_path(entry) %>
-			<%= link_to 'Destroy', entry, confirm: 'Are you sure?', method: :delete %>
+			<%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Really delete this entry?' } %>
 		</td>
 	</tr>
 <% end %>
