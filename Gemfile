@@ -15,3 +15,4 @@ gem 'jquery-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters', group: :development
+gem 'font-awesome-rails'
