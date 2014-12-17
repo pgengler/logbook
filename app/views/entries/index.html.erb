@@ -82,7 +82,11 @@
 
 	<tr>
 		<td><%= f.text_field :flown %></td>
-		<td colspan='2'><%= plane_dropdown(f) %></td>
+		<td colspan='2'>
+			<%= plane_dropdown(f) %>
+			<br>
+			<%= link_to 'Add new plane', new_plane_path %>
+		</td>
 		<td><%= f.text_field :from %></td>
 		<td><%= f.text_field :to %></td>
 		<td><%= f.text_area :remarks %></td>
