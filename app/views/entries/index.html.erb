@@ -85,11 +85,10 @@
 		<td>&nbsp;</td>
 	</tr>
 
-	<tr>
+	<tr class="new">
 		<td><%= f.text_field :flown %></td>
 		<td colspan='2'>
 			<%= plane_dropdown(f) %>
-			<br>
 			<%= link_to 'Add new plane', new_plane_path %>
 		</td>
 		<td><%= f.text_field :from %></td>

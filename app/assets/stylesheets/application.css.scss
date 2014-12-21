@@ -20,25 +20,36 @@ div.header-container {
   margin-right: auto;
 }
 
-input[type=text], textarea {
-	border: 1px solid #ccc;
-	height: 2em;
-	margin: 0;
-	padding: 0;
-	width: 95%;
-}
+tr.new {
+  td {
+    padding: 0;
+    text-align: center;
+  }
 
-textarea {
-	width: 10em;
+  input[type=text], textarea {
+    border: 1px solid #ccc;
+    height: 2em;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  input[type=text] {
+    width: 4em;
+  }
+
+  textarea {
+    width: 10em;
+  }
+
+  select {
+    width: 100%;
+  }
 }
 
 input.button {
     width: auto;
 }
 
-select {
-  width: 100%;
-}
 
 table {
   width: auto;
@@ -52,20 +63,6 @@ td {
   white-space: nowrap;
 }
 
-/*
-table {
-	border-collapse: collapse;
-}
-
-th, td {
-	border: 1px solid #444;
-	text-align: center;
-}
-
-th {
-	background-color: #ddd;
-}
-*/
 tr#totals td {
 	font-weight: bold;
 }
